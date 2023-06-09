@@ -1,0 +1,230 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "adress": {
+        "city": "Staffanstorp",
+        "street": "Jeppsagård",
+        "nbr": "10B",
+        "email": "david86nilsson@gmail.com"
+      },
+      "username": "user",
+      "password": "password",
+      "favorites": []
+    }
+  ],
+  "menyitems": [
+    {
+      "id": 1,
+      "name": "Davids burger",
+      "category": "burgers",
+      "image": "/images/burger-1.png",
+      "description": "Beef, cheese, salad, tomato",
+      "price": 95
+    },
+    {
+      "id": 2,
+      "name": "Wonder burger",
+      "category": "burgers",
+      "image": "/images/burger-2.png",
+      "description": "Black bread, Beef, cheese, secret ingridien",
+      "price": 95
+    },
+    {
+      "id": 3,
+      "name": "Rosen burger",
+      "category": "burgers",
+      "image": "/images/burger-3.png",
+      "description": "Beef, double cheese, onions",
+      "price": 95
+    },
+    {
+      "id": 4,
+      "name": "Poison burger",
+      "category": "burgers",
+      "image": "/images/burger-4.png",
+      "description": "Beef, cheese, salad, poison",
+      "price": 95
+    },
+    {
+      "id": 5,
+      "name": "Ramsey burger",
+      "category": "burgers",
+      "image": "/images/burger-5.png",
+      "description": "Beef, cheese, salad, an insult from Gordon",
+      "price": 95
+    },
+    {
+      "id": 6,
+      "name": "BurgMaester",
+      "category": "burgers",
+      "image": "/images/burger-6.png",
+      "description": "Brioch bread, Beef, cheese, salad",
+      "price": 95
+    },
+    {
+      "id": 7,
+      "name": "Royal with cheese",
+      "category": "burgers",
+      "image": "/images/burger-7.png",
+      "description": "Quarter pounder beef, cheese, salad",
+      "price": 95
+    },
+    {
+      "id": 8,
+      "name": "Bbbbburger",
+      "category": "burgers",
+      "image": "/images/burger-8.png",
+      "description": "Beef, cheese, salad, bacon",
+      "price": 95
+    },
+    {
+      "id": 9,
+      "name": "Hawaii burger",
+      "category": "burgers",
+      "image": "/images/burger-9.png",
+      "description": "Beef, cheese, pineapple",
+      "price": 95
+    },
+    {
+      "id": 10,
+      "name": "Shake raddle and role",
+      "category": "shakes",
+      "image": "/images/milkshake-1.png",
+      "description": "A wonderful shake",
+      "price": 95
+    },
+    {
+      "id": 11,
+      "name": "Wow Fries",
+      "category": "fries",
+      "image": "/images/fries-1.png",
+      "description": "Crazy good fries",
+      "price": 95
+    },
+    {
+      "id": 12,
+      "name": "Jim JeffFries",
+      "category": "fries",
+      "image": "/images/fries-2.png",
+      "description": "Very funny fries",
+      "price": 95
+    },
+    {
+      "id": 13,
+      "name": "So-da-t good",
+      "category": "soda",
+      "image": "/images/soda-1.png",
+      "description": "Orange",
+      "price": 95
+    },
+    {
+      "id": 14,
+      "name": "So-da-mn-good",
+      "category": "soda",
+      "image": "/images/soda-2.png",
+      "description": "Cola",
+      "price": 95
+    },
+    {
+      "id": 15,
+      "name": "Soda pop",
+      "category": "soda",
+      "image": "/images/soda-3.png",
+      "description": "Pineapple",
+      "price": 95
+    },
+    {
+      "id": 16,
+      "name": "So-da-rn-good",
+      "category": "soda",
+      "image": "/images/soda-4.png",
+      "description": "Cherry",
+      "price": 95
+    }
+  ],
+  "orders": [
+    {
+      "userId": {
+        "userId": 1
+      },
+      "adress": {
+        "adress": {
+          "city": "Staffanstorp",
+          "street": "Jeppsagård",
+          "nbr": "1",
+          "email": "david86nilsson@gmail.com"
+        }
+      },
+      "cartItems": {
+        "cartItems": [
+          {
+            "id": 1,
+            "name": "Davids burger",
+            "price": 95,
+            "image": "/images/burger-1.png",
+            "quantity": 2
+          }
+        ]
+      },
+      "id": 1
+    },
+    {
+      "userId": {
+        "userId": 1
+      },
+      "adress": {
+        "adress": {
+          "city": "Staffanstorp",
+          "street": "Jeppsagård",
+          "nbr": "10B",
+          "email": "david86nilsson@gmail.com"
+        }
+      },
+      "cartItems": {
+        "cartItems": [
+          {
+            "id": 10,
+            "name": "Shake raddle and role",
+            "price": 95,
+            "image": "/images/milkshake-1.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "id": 2
+    },
+    {
+      "userId": {
+        "userId": 1
+      },
+      "adress": {
+        "adress": {
+          "city": "Staffanstorp",
+          "street": "Jeppsagård",
+          "nbr": "10B",
+          "email": "david86nilsson@gmail.com"
+        }
+      },
+      "cartItems": {
+        "cartItems": [
+          {
+            "id": 1,
+            "name": "Davids burger",
+            "price": 95,
+            "image": "/images/burger-1.png",
+            "quantity": 1
+          },
+          {
+            "id": 2,
+            "name": "Wonder burger",
+            "price": 95,
+            "image": "/images/burger-2.png",
+            "quantity": 1
+          }
+        ]
+      },
+      "id": 3
+    }
+  ]
+}

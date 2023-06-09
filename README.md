@@ -1,70 +1,23 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+För att start denna app:
+1: öppna terminalen
+2: skriv "npm run json-server" för att starta databasen
+3: öppna en ny terminal
+4: skriv "npm start" i terminalen för att starta appen i default web browser
 
-## Available Scripts
+## Användning
 
-In the project directory, you can run:
+För att beställa klickar man på de artiklar man vill beställa och i artikelns egna sida klickar på knappen för att lägga till sin varukorg. I varukorgen kan man sedan ändra antal av varje artikel man lagt till. När man är klar med sin varukorg går man vidare till betalningssidan med knappen "Pay". I Pay fyller man först i sin adress. När denna adress är ifylld korrekt dyker betalningsalternativen upp. För att betala skannar man Swish koden eller fyller i sina kortuppgifter. När kortuppgifterna är korrekta dyker betalningsknappen upp. Vid tryck på denna knapp hamnar man på bekräftelsesidan där man ser vad man beställt och ens order sparas till databasen.
 
-### `npm start`
+## Val och varför
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Jag har valt att göra menysidan till startsida för att snabbare visa maten för användaren och därför göra det enklare för användaren att se vad som kan beställas. Samtidigt har jag valt dova bakgrundsfärger för att locka användarens uppmärksamhet mot bilderna på maten.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Jag har valt att begränsa antalet produkter på startsidan till tre stycken åt gången per kategori för att minska scrollning och göra sidan mer lättöverskådlig. Detta innebar att jag var tvungen att implementera knappar för att se andra produkter. Dessa knappar var något kluriga att placera på lämplig plats men i slutändan kom jag fram till att placera dem till vänster och höger om produkterna på både stora och små skärmar.
 
-### `npm test`
+Jag valde tidigt i processen att man skulle kunna beställa oavsett om man var inloggad eller inte, då detta är blir ett allt vanligare tillvägagångsätt inom e-handel. Detta skapade problem så till vida att information om vem som gjort beställningar inte alltid funnits tillgänglig. I slutändan blev lösningen att ordern sparas i database med property userId och ett object adress. Där userId sätts till 0 om ingen är inloggad. Då kan dessutom en inloggad användare beställa mat till en annan adress än sin egen.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inloggningen ligger som en del i headern och inte som en egen sida. Genom att göra så kan användaren när som helst under sin beställningsprocess logga in utan hamna på en ny sida och bli avbruten i sin process. Detta ger enligt mig en mer användarvänlig upplevelse. Den inloggade användaren får sedan sin adress automatiskt ifylld i betalningsfönstret men kan ändra denna till en annan adress.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Inloggning fungerar med hjälp localStorage där användarens id sparas i localStorage. Här finns en säkerhetsbrist då det blir enkelt för användarens att komma åt någon annas inloggning.
